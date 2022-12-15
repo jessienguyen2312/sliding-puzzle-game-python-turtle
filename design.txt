@@ -1,0 +1,54 @@
+Overview:
+For this project, I made the sliding puzzle game using python and the turtle module. 
+Through this project, I've learn a bit about 2D arrays and how to use them. I've also learn to
+apply the skills that we've learn in CS5001, and it helped me gain a deeper understanding of how object-oriented programming works. 
+
+Design:
+I used a mixture of procedural and object-oriented programming for this project. 
+Approximately 80% of the project is procedural programming, and 20% is object-oriented programming. 
+The procedural portion does most of the heavy-lifting by handling most of the game play functionality and logic of the game. 
+On the other hand, the object-oriented portion acts as a "helper" by keeping track of player's number of moves for the 
+leaderboard, win/lose determination, and display error messages when needed. 
+A trade-off decision that I had to make is that in order to prevent the game from ending when user hits the reset button, 
+I had to make it so that the game only checks for the winning tile configuration when the player clicks within an area on 
+the screen that is 1 tile wide from the blank tile. A bug that arises from this is that if the user clicks on the reset button, 
+and then click on the blank tile, then the game will end. So technically someone can "super cheat" and beat the game in 0 moves 
+by clicking reset, and then the blank tile. 
+
+Source files:
+A list of files and folders in my directory and their purpose:
+Files:
+1. puzzle_game.py: The file that will run the sliding puzzle game
+2. Leaderboard.py: Contains the class to keep track of player moves
+3. messages_settings.py: Contains the subclass to help run error messages 
+4. 5001_puzzle.err: Contains a record of all the error messages that popped up while the game was running for troubleshooting purpose
+5. All the ".puz" files (mario, luigi, malformed_mario, smiley, yoshi, fifteen): Contains metadata for all the puzzles
+Folders:
+1. Resources: Contains all the images for splash screen, error messages, and other type of messages as communication to the user
+2. Images: Contains all the images of the tiles for the puzzle, and its thumbnails. 
+
+Instructions for use:
+Note: I didn't add any extra features or skin into the game, but I think every game
+should have a tutorial included.
+1. Unzip the folder, then run the file puzzle_game.py to initialize the game. 
+2. Enter your name into the dialogue box.
+3. Enter the number of moves you want to play with in the dialogue box. 
+4. Click on "Load" button to load another puzzle, and enter in the name of the puzzle (without the .puz) extension to load puzzle. 
+5. Click on the reset button if you don't feel like solving the puzzle anymore but still want to win 
+(Note: the reset button doesn't end the game, you will need to make 2 extra moves. One to "scramble" the 
+tile adjacent to the blank tile, and another one to put it back where it was supposed to be).
+6. Click on the Quit button to quit the game if you don't want to play anymore.
+7. If you do not beat the game in the alotted number of moves, you will automatically lose.   
+
+Citations/References:
+1) Framework for board, tile layout, and tile distribution:
+	Robin-Andrews. “15-Puzzle-Python-Turtle/15_puzzle_turtle.Py at Master · Robin-
+	Andrews/15-Puzzle-Python-Turtle.” GitHub, https://github.com/Robin-Andrews/15-Puzzle-	
+	Python-Turtle/blob/master/15_puzzle_turtle.py. Date of retrieval 11/21/2022.
+2) Framework for the subclass messages_settings.py:
+	Website: Stackoverflow
+	URL: https://stackoverflow.com/a/50912869
+	Title: "Using python classes (OOP) to create FUNCTIONAL turtle objects?"
+	Date of retrieval: 12/4/2022
+
+Thank you Kyle Fairbairn for helping me understand the concept of clearing the board and loading new puzzles.
